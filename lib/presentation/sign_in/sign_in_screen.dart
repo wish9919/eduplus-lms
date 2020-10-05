@@ -72,6 +72,7 @@ class SignInScreen extends StatelessWidget {
                         ),
                         SizedBox(height: 20),
                         LoginInput(
+                            secureText: true,
                             hintText: 'Password',
                             icon: Icon(
                               Feather.lock,
@@ -108,7 +109,7 @@ class SignInScreen extends StatelessWidget {
                                   padding:
                                       EdgeInsets.only(top: 12.0, bottom: 12.0),
                                   decoration: BoxDecoration(
-                                      color: Colors.white,
+                                      color: ThemeColors.accent_color,
                                       boxShadow: [
                                         BoxShadow(
                                           color: ThemeColors.accent_color
@@ -129,7 +130,7 @@ class SignInScreen extends StatelessWidget {
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.w600,
-                                            color: ThemeColors.accent_color,
+                                            color: Colors.white,
                                           )),
                                       SizedBox(
                                         width: 5,
@@ -137,7 +138,7 @@ class SignInScreen extends StatelessWidget {
                                       Icon(
                                         Feather.arrow_right,
                                         size: 22,
-                                        color: ThemeColors.accent_color,
+                                        color: Colors.white,
                                       )
                                     ],
                                   ),

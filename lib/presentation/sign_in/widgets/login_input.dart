@@ -4,10 +4,8 @@ import 'package:eduplus_lms/presentation/theme/theme.dart';
 class LoginInput extends StatelessWidget {
   final String hintText;
   final Icon icon;
-  LoginInput({
-    @required this.hintText,
-    @required this.icon,
-  });
+  bool secureText;
+  LoginInput({@required this.hintText, @required this.icon, this.secureText});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,6 +19,7 @@ class LoginInput extends StatelessWidget {
             width: 1.0,
           )),
       child: TextField(
+        obscureText: secureText == null ? false : true,
         decoration: InputDecoration(
             icon: icon,
             border: InputBorder.none,
